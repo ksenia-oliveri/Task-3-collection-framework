@@ -8,7 +8,6 @@ class UniqueChars
     {   
         if(!key_exists($string, self::$cache))
         {
-            echo PHP_EOL . "work in progress on $string";
              $strToArr = mb_str_split($string);
         $count = array_count_values($strToArr);
         $uniqChars = [];
