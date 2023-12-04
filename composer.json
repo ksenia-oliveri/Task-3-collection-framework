@@ -1,0 +1,10 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Src\\": "src/"
+        }
+    },
+    "require": {
+        "phpcollection/phpcollection": "^0.6.0"
+    }
+}
