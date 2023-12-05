@@ -16,6 +16,7 @@ class UniqueCharsClassTest extends TestCase
     public function testCountUniqueChar2()
     {
         $uniqChar = new UniqueChars();
+        $uniqChar->CountUniqueChars($this->string);
         $this->assertEquals(4, $uniqChar::$cache[$this->string]);
     }
 }

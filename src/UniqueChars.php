@@ -8,17 +8,17 @@ class UniqueChars
     {   
         if(!key_exists($string, self::$cache))
         {
-             $strToArr = mb_str_split($string);
-        $count = array_count_values($strToArr);
-        $uniqChars = [];
-        foreach($count as $num)
-        {
-            if($num == 1)
+            $strToArr = mb_str_split($string);
+            $count = array_count_values($strToArr);
+            $uniqChars = [];
+            foreach($count as $num)
             {
-                $uniqChars[] = $num;
+                if($num == 1)
+                {
+                    $uniqChars[] = $num;
+                }
             }
-        }
-         self::$cache[$string] = count($uniqChars);
+            self::$cache[$string] = count($uniqChars);
         }
       return self::$cache[$string];
     }   
